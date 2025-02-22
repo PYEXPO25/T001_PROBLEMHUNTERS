@@ -44,12 +44,16 @@ List your team members along with their roles.
 
 ## Technical Stack
 
-List the technologies and tools used in the project. For example:
-
-- *Frontend:* HTML, CSS, JavaScript, ReactJS
-- *Backend:* Flask, Django
-- *Database:* MongoDB, MySQL
-- *Other Tools:* Docker, Git, TensorFlow
+Tech Stack:
+1. Backend 
+Django - Python web framework, is used for rapid development of secure and maintainable websites
+OpenCV → For video processing and real-time detection
+YOLOv8 (Ultralytics) → For helmet detection & license plate recognition
+easy OCR → For extracting license plate text
+2. Frontend
+ HTML, CSS → For a simple dashboard to display results
+3. Database (For Storing Results)
+ MySQL → To store detected violations and plate numbers
 
 ---
 
@@ -63,7 +67,7 @@ Follow these steps to clone and run the application locally.
 2. Install [Git](https://git-scm.com/).
 3. Clone this repository:
    bash
-   git clone https://github.com/joedanields/repository-name.git
+   git clone https://github.com/joedanields/T001-PROBLEMHUNTERS.git
    
 
 ### Installation
@@ -98,9 +102,9 @@ Follow these steps to clone and run the application locally.
 
 ## Start the Application
 
-1. Run the Flask application:
+1. Run the Django application:
    bash
-   flask run
+   python manage.py runserver
    
 2. Open your browser and navigate to:
    
