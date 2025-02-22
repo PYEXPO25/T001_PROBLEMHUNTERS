@@ -1,4 +1,4 @@
-![PyExpo Logo](media/pyexpo-logo(1).png)
+![PyExpo Logo](media/output/pyexpo-logo(1).png)
 
 ---
 
@@ -38,7 +38,7 @@ List your team members along with their roles.
 - *Adarsh Ram K* - Back-end developer
 
 
-![Team Photo](media/team-photo.png)
+![Team Photo](media/output/T001.jpg)
 
 ---
 
