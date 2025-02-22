@@ -1,7 +1,10 @@
-from django.urls import path
+from django.urls import path, include
+
 from . import views
 
 urlpatterns = [
+    path('upload/', upload_violation, name='upload_violation'),  # Add path for uploading violations
+
     path('violation/', views.violation_view, name='violation'),
-    path('',views.test_add,name='test_add'),
+    path('add/',views.test_add,name='test_add'),
 ]

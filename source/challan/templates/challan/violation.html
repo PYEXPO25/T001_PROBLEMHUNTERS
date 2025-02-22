@@ -10,33 +10,31 @@
     <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Challan Records</h1>
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-2">
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th class="border border-gray-300 p-2">Number Plate</th>
-                <th class="border border-gray-300 p-2">Violation Time</th>
-                <th class="border border-gray-300 p-2">Fine Amount</th>
-                <th>Image</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for violation in violations %}
-            <tr>
-                <td class="border border-gray-300 p-2" data-field="name">{{ violation.id }}</td>
-                <td class="border border-gray-300 p-2" data-field="name">{{ violation.number_plate }}</td>
-                <td class="border border-gray-300 p-2" data-field="name">{{ violation.violation_time }}</td>
-                <td class="border border-gray-300 p-2" data-field="name">{{ violation.fine_amount }}</td>
-                <td>
-                    {% if violation.image %}
-                    <img height="200" width="300" src="{{ violation.image.url }}" alt="Violation Image">
-                    {% else %}
-                    No Image
-                    {% endif %}
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th class="border border-gray-300 p-2">Number Plate</th>
+                        <th class="border border-gray-300 p-2">Violation Time</th>
+                        <th class="border border-gray-300 p-2">Fine Amount</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for violation in violations %}
+                    <tr>
+                        <td class="border border-gray-300 p-2" data-field="name">{{ violation.id }}</td>
+                        <td class="border border-gray-300 p-2" data-field="name">{{ violation.number_plate }}</td>
+                        <td class="border border-gray-300 p-2" data-field="name">{{ violation.violation_time }}</td>
+                        <td class="border border-gray-300 p-2" data-field="name">{{ violation.fine_amount }}</td>
+                        <td class="border border-gray-300 p-2">
+                            <img src="{{ violation.image }}" alt="Violation Image" style="max-width: 100px; max-height: 100px;">
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

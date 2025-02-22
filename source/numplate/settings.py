@@ -54,7 +54,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Project',
         'USER': 'root',
-        'PASSWORD': 'Adarshram',
+        'PASSWORD': '*&*^&*&',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -89,3 +89,12 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+
+MEDIA_URL = '/media/'  
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  
+
+
+
+ 
