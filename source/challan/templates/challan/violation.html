@@ -6,6 +6,24 @@
     <title>Challan Records</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
+<body>
+
+    <h2>Enter a Text</h2>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button onclick="getInput()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function getInput() {
+            let inputText = document.getElementById("userInput").value;
+            document.getElementById("output").innerText = "You entered: " + inputText;
+        }
+    </script>
+
+</body>
+
 <body class="bg-gray-100 min-h-screen py-10">
     <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Challan Records</h1>
     <div class="container mx-auto px-4">

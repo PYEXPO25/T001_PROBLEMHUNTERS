@@ -1,10 +1,7 @@
-from django.urls import path, include
-
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('upload/', upload_violation, name='upload_violation'),  # Add path for uploading violations
-
-    path('violation/', views.violation_view, name='violation'),
-    path('add/',views.test_add,name='test_add'),
+    path('', views.input_number_plate, name='input_number_plate'),  # Add path for inputting number plate
+    path('violation/', views.violation_list, name='violation'),  # Ensure this matches the view name
 ]

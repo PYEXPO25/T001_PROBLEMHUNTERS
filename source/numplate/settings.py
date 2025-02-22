@@ -16,7 +16,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'challan',
-    'input',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +53,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'Project',
         'USER': 'root',
-        'PASSWORD': '*&*^&*&',
+        'PASSWORD': 'Adarshram',
         'HOST': 'localhost',
         'PORT': '3306',
     }
