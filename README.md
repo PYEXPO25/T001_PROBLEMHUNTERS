@@ -113,22 +113,7 @@ Follow these steps to clone and run the application locally.
 
 ---
 
-## UI Overview
 
-Images to demonstrate the user interface:
-
-*Example pages:*
-
-1. *Landing Page:*
-   ![Landing Page Mockup](media/LoadingPage.png)
-
-2. *Dashboard:*
-   ![Dashboard Mockup](media/DashBoard.png)
-
-3. *Analytics View:*
-   ![Analytics Mockup](media/Analytics.png)
-
----
 
 ## Resources
 
@@ -138,7 +123,5 @@ Images to demonstrate the user interface:
 ### 🎥 Project Video
 [Click here to view the project demo video](https://drive.google.com/drive/folders/1KV5k5c2acJsfdZ281jTK2JkdkIPZVAlV)
 
-### 📹 YouTube Link
-[Watch the project on YouTube](insert-youtube-link-here)
 
 ---
