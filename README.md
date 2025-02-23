@@ -29,8 +29,6 @@ The system aims to improve traffic rule enforcement, reduce manual effort, and e
 ## Team Members
 
 *Team ID – T001
-List your team members along with their roles.
-
 - *Joe Daniel A* - Team Leader
 - *Akilan CK* - Machine Learning Engineer
 - *Madhumitha A* - DataBase Administrator
