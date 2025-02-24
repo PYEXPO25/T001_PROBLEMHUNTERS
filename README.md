@@ -65,7 +65,7 @@ Follow these steps to clone and run the application locally.
 2. Install [Git](https://git-scm.com/).
 3. Clone this repository:
    bash
-   git clone https://github.com/joedanields/T001-PROBLEMHUNTERS.git
+   git clone `https://github.com/joedanields/T001-PROBLEMHUNTERS.git`
    
 
 ### Installation
