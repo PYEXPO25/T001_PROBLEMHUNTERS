@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challan Records</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    
+
+    <p id="output"></p>
+
+    
+
+</body>
+
+<body class="bg-gray-100 min-h-screen py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Challan Records</h1>
+        {%if violations%}
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200">
+
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Challan ID</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Number Plate</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Violation Time</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fine Amount</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        {% for violation in violations %}
+                        <tr class="hover:bg-gray-50 transition-colors duration-200">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ violation.id }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ violation.number_plate }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{ violation.violation_time|date:"Y F d H:i:s" }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">₹{{ violation.fine_amount }}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{{violation.status}}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="relative group">
+                                    <img src="{% static 'rider.jpg' %}" alt="Violation Image" class="w-24 h-24 object-cover rounded-lg shadow-sm transform group-hover:scale-105 transition-transform duration-200 cursor-pointer">
+                                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-colors duration-200 rounded-lg"></div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        {% endfor %}
+                    </tbody>
+                </table>
+        </div>
+    </div>
+    {% else %}
+        <div class="text-center py-20">
+            <div class="max-w-md mx-auto">
+                <svg class="mx-auto h-16 w-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <h3 class="mt-4 text-xl font-medium text-gray-900">No records found</h3>
+                <p class="mt-1 text-sm text-gray-500">There are currently no violation records to display.</p>
+            </div>
+        </div>
+    {% endif %}
+
+    <footer class="mt-10 py-6 text-center text-sm text-gray-500 border-t border-gray-200">
+        &copy;  2025 ,All rights reserved.  Problem Hunters.
+    </footer>
+</body>
+</html>

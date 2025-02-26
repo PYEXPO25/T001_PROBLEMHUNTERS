@@ -6,14 +6,20 @@
     <title>Challan Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen py-10">
-    <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Input Number Plate</h1>
-    <div class="container mx-auto px-4">
-        <form method="POST">
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+    
+    <h1 class="text-4xl font-bold text-gray-800 mb-10 text-center">Input Number Plate</h1>
+    
+    <div class="bg-white p-8 pb-12 rounded-lg shadow-md w-full max-w-md border-2 border-gray-300">
+        <form method="POST" class="p-6 rounded-lg">
             {% csrf_token %}
-            {{ number_plate_form.as_p }}
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+            <div class="mb-4">
+                {{ number_plate_form.as_p }}
+                
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200">Submit</button>
         </form>
     </div>
+    
 </body>
 </html>
