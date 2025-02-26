@@ -119,7 +119,7 @@ Follow these steps to clone and run the application locally.
 [Click here to view the PPT](https://docs.google.com/presentation/d/1AdohcYIEaekxf3y7AZnf9Uo_uB4WrVGFtCxf4rmY7Ns/edit?usp=sharing)
 
 ### 🎥 Project Video
-[Click here to view the project demo video](https://drive.google.com/drive/folders/1KV5k5c2acJsfdZ281jTK2JkdkIPZVAlV)
+[Click here to view the project demo video](https://drive.google.com/file/d/15RKEW1aCyzj0gJTuwanUyJpUaYwPoyPB/view?usp=sharing)
 
 
 ---
